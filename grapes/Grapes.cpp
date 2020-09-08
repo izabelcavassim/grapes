@@ -2694,7 +2694,7 @@ void file_output(struct onelocus_data* data, vector<struct parameter_point> v_op
     fprintf(out, "%s,", data->locus_name);
     fprintf(out, "%.4f,%.4f,%.4f,%.4f,%.4f,%.4f,%.4f,%.4f,", totpN, data->Ln_poly, totpS, data->Ls_poly, data->fixN, data->Ln_div, data->fixS, data->Ls_div);
     fprintf(out, "%s,%d,%.4f,%.4f,%.4f,%.4f,%.4f,%.4f,%.4f,%.4f,%.4f,%.4f,%.4f,%.4f,%.4f,%.4f,", v_optimum[k].model_name.c_str(), nbparam, v_optimum[k].lnL, v_optimum[k].alpha, v_optimum[k].alpha_down, v_optimum[k].alpha_up, v_optimum[k].omegaA, v_optimum[k].omegaA_down, 
-            [k].omegaA_up, v_optimum[k].omegaNA, v_optimum[k].omegaNA_down, v_optimum[k].omegaNA_up, v_optimum[k].discr_DFE_fixed[0], v_optimum[k].discr_DFE_fixed[1], v_optimum[k].discr_DFE_fixed[2], v_optimum[k].discr_DFE_fixed[3]);
+            v_optimum[k].omegaA_up, v_optimum[k].omegaNA, v_optimum[k].omegaNA_down, v_optimum[k].omegaNA_up, v_optimum[k].discr_DFE_fixed[0], v_optimum[k].discr_DFE_fixed[1], v_optimum[k].discr_DFE_fixed[2], v_optimum[k].discr_DFE_fixed[3]);
     fprintf(out, "NA,");
     if (opt.use_syno_orientation_error)
       fprintf(out, "NA,");
