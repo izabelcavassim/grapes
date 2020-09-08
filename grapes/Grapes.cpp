@@ -2370,7 +2370,8 @@ vector<double> calculate_alpha_fww(struct onelocus_data* data, double alfreq_thr
 }
 
 
-/* calculate_alpha_CI */
+/* calculate_alpha_CI */ 
+// CI is calculated as follow: Confidence intervals around estimates of α (and the other parameters) were defined as values of α for which the log-likelihood was within two units of its maximum. (Galtier 2016)
 
 void calculate_alpha_CI(struct onelocus_data* data, struct parameter_point* optimal, double threshold)
 {
@@ -2601,7 +2602,7 @@ void file_output(struct onelocus_data* data, vector<struct parameter_point> v_op
 
 
   // header
-  fprintf(out, "dataset,pn,Lpn,ps,Lps,dn,Ldn,ds,Lds,model,#param,lnL,alpha,alpha_down,alpha_up,omegaA,omegaA_down,omegaA_up,");
+  fprintf(out, "dataset,pn,Lpn,ps,Lps,dn,Ldn,ds,Lds,model,#param,lnL,alpha,alpha_down,alpha_up,omegaA,omegaA_down,omegaA_up,omegaNA,omegaNA_down,omegaNA_up,");
   fprintf(out, "prop_subst_sdel,prop_subst_wdel,prop_subst_wadv,prop_subst_sadv,Neutral:f0,");
   if (opt.use_syno_orientation_error)
     fprintf(out, "Neutral:syno_orientation_error,");
